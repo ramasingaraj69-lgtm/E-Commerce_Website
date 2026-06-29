@@ -1,4 +1,9 @@
+import os
 from pymongo import MongoClient
-MONGO_URI="mongodb+srv://ramaramas2004_db_user:55qLwgI0T5vTQloX@smartagriculturecluster.ib4npqu.mongodb.net/?appName=SmartAgricultureCluster"
+
+# Get from environment variable (Render)
+MONGO_URI = os.getenv("MONGO_URI")
+
 client = MongoClient(MONGO_URI)
+
 db = client["sunflower_shop"]
